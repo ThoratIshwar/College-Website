@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future College | About Us</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+ <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fc;
+            color: #30364b;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #302078, #1769aa);
+            padding: 14px 0;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-brand i { color: #ffd54f; }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .nav-link:hover { color: #ffd54f !important; }
+
+        .page-hero {
+            min-height: 310px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(38, 25, 103, .85), rgba(20, 94, 155, .78)),
+                url("campus.jpg") center/cover no-repeat;
+        }
+
+        .page-hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin: 12px auto 0;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .section { padding: 70px 0; }
+
+        .section-heading {
+            color: #302078;
+            font-weight: 800;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .eyebrow {
+            color: #1769aa;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(30, 45, 90, .15);
+        }
+
+        .about-text {
+            color: #687087;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 12px;
+            height: 100%;
+            box-shadow: 0 8px 26px rgba(30, 45, 90, .08);
+            border-bottom: 4px solid #1769aa;
+        }
+
+        .info-card .icon {
+            color: #4a2aa6;
+            background: #eeeaff;
+            width: 58px;
+            height: 58px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .info-card h4 {
+            color: #302078;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .info-card p {
+            color: #687087;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 8px 26px rgba(30, 45, 90, .08);
+        }
+
+        .facility-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .facility-content { padding: 24px; }
+
+        .facility-content h4 {
+            color: #302078;
+            font-weight: bold;
+        }
+
+        .facility-content p {
+            color: #687087;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .cta {
+            background: linear-gradient(100deg, #302078, #1769aa);
+            color: white;
+            border-radius: 14px;
+            padding: 48px 25px;
+            text-align: center;
+        }
+
+        .cta h2 { font-weight: 800; }
+
+        .btn-gold {
+            display: inline-block;
+            background: #ffd54f;
+            color: #252044;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn-gold:hover {
+            background: #ffbf26;
+            color: #252044;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #211744;
+            color: #e7e5f2;
+            padding: 42px 0 18px;
+        }
+
+        footer h5 { color: #ffd54f; font-weight: bold; }
+        footer a { color: #e7e5f2; }
+        footer a:hover { color: #ffd54f; text-decoration: none; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.16);
+            padding-top: 18px;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .page-hero { min-height: 260px; }
+            .page-hero h1 { font-size: 34px; }
+            .section { padding: 48px 0; }
+            .section-heading { font-size: 28px; }
+            .about-photo { height: 270px; margin-top: 25px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-graduation-cap"></i> Bright Future
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Banner -->
+<header class="page-hero">
+    <div class="container">
+        <h1>About Our College</h1>
+        <p>Discover our commitment to learning, personal growth, technology and a brighter future for every student.</p>
+    </div>
+</header>
+
+<!-- About Introduction -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="eyebrow">Who We Are</span>
+                <h2 class="section-heading mt-2">Building Knowledge, Skills and Confidence</h2>
+
+                <p class="about-text">
+                    Bright Future College is presented as a student-focused educational
+                    institution dedicated to academic learning and personal development.
+                    Our goal is to help students build knowledge, discover their interests
+                    and prepare for future opportunities.
+                </p>
+
+                <p class="about-text">
+                    Through classroom learning, practical activities, teamwork and the
+                    use of technology, students can develop problem-solving skills,
+                    creativity and confidence. We believe education should prepare
+                    students for both professional life and responsible citizenship.
+                </p>
+
+                <a href="contact.html" class="btn-gold">Get in Touch</a>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="classroom.jpg" alt="Students learning in a classroom"
+                     class="about-photo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission and Vision -->
+<section class="section" style="background:#edf1fa;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="eyebrow">Our Purpose</span>
+            <h2 class="section-heading mt-2">Mission, Vision and Values</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="info-card">
+                    <div class="icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Our Mission</h4>
+                    <p>To encourage quality learning, practical knowledge, ethical values and continuous student development.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="info-card">
+                    <div class="icon"><i class="fas fa-eye"></i></div>
+                    <h4>Our Vision</h4>
+                    <p>To inspire learners to become skilled, confident, creative and responsible members of society.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="info-card">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <h4>Our Values</h4>
+                    <p>We value respect, honesty, teamwork, curiosity, inclusiveness and a commitment to lifelong learning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="eyebrow">Learning Environment</span>
+            <h2 class="section-heading mt-2">Facilities for Students</h2>
+            <p class="text-muted">Spaces that support study, exploration and practical learning.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="facility-card">
+                    <img src="library.jpg" alt="College library">
+                    <div class="facility-content">
+                        <h4><i class="fas fa-book-reader mr-2"></i>Library</h4>
+                        <p>A quiet place for reading, reference work, research and independent study.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="facility-card">
+                    <img src="computer-lab.jpg" alt="Computer laboratory">
+                    <div class="facility-content">
+                        <h4><i class="fas fa-desktop mr-2"></i>Computer Laboratory</h4>
+                        <p>A practical learning environment for computer applications, programming and digital skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section pt-0">
+    <div class="container">
+        <div class="cta">
+            <h2>Take the Next Step in Your Education</h2>
+            <p class="my-3">Contact us to learn more about the college and its programs.</p>
+            <a href="contact.html" class="btn-gold">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <h5><i class="fas fa-graduation-cap"></i> Bright Future College</h5>
+                <p>Empowering students through education, innovation and practical learning.</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <h5>Quick Links</h5>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+
+            <div class="col-md-4 col-6 mb-4">
+                <h5>Contact</h5>
+                <p><i class="fas fa-envelope"></i> info@brightfuture.edu</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> Maharashtra, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Bright Future College. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future College | Home</title>
+
+    
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    
+  
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fc;
+            color: #30364b;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #302078, #1769aa);
+            padding: 14px 0;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff !important;
+        }
+
+        .navbar-brand i { color: #ffd54f; }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .nav-link:hover { color: #ffd54f !important; }
+
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            color: white;
+            background:
+                linear-gradient(90deg, rgba(30, 20, 85, .90),
+                rgba(18, 93, 155, .55)),
+                url("campus.jpg") center/cover no-repeat;
+        }
+
+        .hero-content { max-width: 700px; padding: 75px 0; }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .btn-gold {
+            background: #ffd54f;
+            color: #252044;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn-gold:hover {
+            background: #ffbf26;
+            color: #252044;
+            text-decoration: none;
+        }
+
+        .btn-outline-light-custom {
+            border: 2px solid white;
+            color: white;
+            padding: 11px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: white;
+            color: #302078;
+            text-decoration: none;
+        }
+
+        .section { padding: 75px 0; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #1769aa;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #302078;
+            margin-top: 10px;
+        }
+
+        .section-title p {
+            color: #6d7486;
+            max-width: 650px;
+            margin: 12px auto 0;
+            line-height: 1.7;
+        }
+
+        .feature-card {
+            height: 100%;
+            background: white;
+            border-radius: 12px;
+            padding: 30px 24px;
+            box-shadow: 0 8px 28px rgba(30, 45, 90, .08);
+            transition: .25s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 35px rgba(30, 45, 90, .14);
+        }
+
+        .feature-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eeeaff;
+            color: #4a2aa6;
+            border-radius: 14px;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h4 {
+            color: #302078;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: #6d7486;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .image-card {
+            background: white;
+            height: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 28px rgba(30, 45, 90, .09);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 225px;
+            object-fit: cover;
+        }
+
+        .image-card-content { padding: 22px; }
+
+        .image-card h4 {
+            color: #302078;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .image-card p {
+            color: #6d7486;
+            line-height: 1.7;
+        }
+
+        .stats {
+            background: linear-gradient(90deg, #302078, #1769aa);
+            color: white;
+            padding: 48px 0;
+        }
+
+        .stat-item { text-align: center; padding: 12px; }
+
+        .stat-item h3 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffd54f;
+        }
+
+        .stat-item p { margin: 0; font-weight: 600; }
+
+        .cta {
+            background: #eeeaff;
+            padding: 55px 20px;
+            text-align: center;
+            border-radius: 14px;
+        }
+
+        .cta h2 { color: #302078; font-weight: 800; }
+
+        footer {
+            background: #211744;
+            color: #e7e5f2;
+            padding: 45px 0 18px;
+        }
+
+        footer h5 { color: #ffd54f; font-weight: bold; }
+
+        footer a { color: #e7e5f2; }
+        footer a:hover { color: #ffd54f; text-decoration: none; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.16);
+            padding-top: 18px;
+            margin-top: 28px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .hero { min-height: 450px; }
+            .hero h1 { font-size: 35px; }
+            .hero p { font-size: 16px; }
+            .section { padding: 50px 0; }
+            .section-title h2 { font-size: 28px; }
+            .btn-outline-light-custom {
+                display: inline-block;
+                margin: 12px 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-graduation-cap"></i> Bright Future
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Learn Today.<br>Lead Tomorrow.</h1>
+            <p>
+                Welcome to Bright Future College, where knowledge, creativity,
+                technology and practical learning help students build a successful future.
+            </p>
+            <a href="about.html" class="btn-gold">Explore Our College</a>
+            <a href="contact.html" class="btn-outline-light-custom">Contact Us</a>
+        </div>
+    </div>
+</header>
+
+<!-- Features -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <span>Why Choose Us?</span>
+            <h2>Education for a Brighter Future</h2>
+            <p>We support students with quality education, modern facilities and opportunities to develop practical skills.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+                    <h4>Quality Education</h4>
+                    <p>Build a strong foundation with structured learning and guidance from dedicated teachers.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h4>Modern Technology</h4>
+                    <p>Develop digital skills through practical activities, computer learning and technology-based education.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h4>Student Development</h4>
+                    <p>Improve communication, teamwork, creativity and confidence through student activities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities -->
+<section class="section" style="background:#edf1fa;">
+    <div class="container">
+        <div class="section-title">
+            <span>Campus Life</span>
+            <h2>Explore Our Facilities</h2>
+            <p>A supportive campus environment helps students learn, explore and grow.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="image-card">
+                    <img src="classroom.jpg" alt="College classroom">
+                    <div class="image-card-content">
+                        <h4>Smart Classrooms</h4>
+                        <p>Comfortable learning spaces designed for classroom teaching and discussion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="image-card">
+                    <img src="library.jpg" alt="College library">
+                    <div class="image-card-content">
+                        <h4>College Library</h4>
+                        <p>A learning space for reading, research and independent study.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="image-card">
+                    <img src="computer-lab.jpg" alt="College computer laboratory">
+                    <div class="image-card-content">
+                        <h4>Computer Laboratory</h4>
+                        <p>Practice computer applications and improve technical knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="about.html" class="btn btn-primary px-4 py-2">Discover More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics: Replace sample figures with real college data -->
+<section class="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 stat-item">
+                <h3>20+</h3>
+                <p>Expert Teachers</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3>500+</h3>
+                <p>Students</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3>15+</h3>
+                <p>Courses & Programs</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3>10+</h3>
+                <p>Years of Learning</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section">
+    <div class="container">
+        <div class="cta">
+            <h2>Your Future Starts Here</h2>
+            <p class="mt-3 mb-4">Have questions about our college? Get in touch with us.</p>
+            <a href="contact.html" class="btn-gold">Contact the College</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <h5><i class="fas fa-graduation-cap"></i> Bright Future College</h5>
+                <p>Empowering students through education, innovation and practical learning.</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <h5>Quick Links</h5>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+
+            <div class="col-md-4 col-6 mb-4">
+                <h5>Contact</h5>
+                <p><i class="fas fa-envelope"></i> info@brightfuture.edu</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> Maharashtra, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Bright Future College. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Bright Future College</title>
+
+    
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fc;
+            color: #30364b;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #302078, #1769aa);
+            padding: 14px 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-brand i {
+            color: #ffd54f;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .nav-link:hover {
+            color: #ffd54f !important;
+        }
+
+        /* Banner */
+        .page-hero {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(38, 25, 103, .85),
+                rgba(20, 94, 155, .78)),
+                url("campus.jpg") center/cover no-repeat;
+        }
+
+        .page-hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin: 12px auto 0;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* Main Section */
+        .contact-section {
+            padding: 70px 0;
+        }
+
+        .section-heading {
+            color: #302078;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .section-description {
+            color: #6d7486;
+            line-height: 1.8;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            height: 100%;
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 8px 26px rgba(30, 45, 90, .09);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            min-width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eeeaff;
+            color: #4a2aa6;
+            border-radius: 12px;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .contact-item h5 {
+            color: #302078;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .contact-item p {
+            color: #6d7486;
+            line-height: 1.7;
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-photo {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #30364b;
+            font-weight: 600;
+        }
+
+        .form-control {
+            height: 46px;
+            border: 1px solid #dfe3ed;
+            border-radius: 7px;
+        }
+
+        textarea.form-control {
+            height: 135px;
+            resize: vertical;
+        }
+
+        .form-control:focus {
+            border-color: #5a42b5;
+            box-shadow: 0 0 0 3px rgba(90, 66, 181, .12);
+        }
+
+        .btn-submit {
+            background: #ffd54f;
+            color: #252044;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background: #ffbf26;
+            color: #252044;
+        }
+
+        /* Footer */
+        footer {
+            background: #211744;
+            color: #e7e5f2;
+            padding: 42px 0 18px;
+        }
+
+        footer h5 {
+            color: #ffd54f;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        footer a {
+            color: #e7e5f2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffd54f;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .16);
+            padding-top: 18px;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 767px) {
+            .page-hero {
+                min-height: 250px;
+            }
+
+            .page-hero h1 {
+                font-size: 34px;
+            }
+
+            .contact-section {
+                padding: 45px 0;
+            }
+
+            .section-heading {
+                font-size: 28px;
+            }
+
+            .contact-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap"></i>
+                Bright Future
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contact Banner -->
+    <header class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>
+                Have a question about our college?
+                Get in touch with us. We are happy to help you.
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-heading">Let's Connect</h2>
+                <p class="section-description">
+                    Send us your questions, suggestions or admission enquiries.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <!-- Contact Information -->
+                <div class="col-lg-5 mb-4">
+                    <div class="contact-card">
+
+                        <h3 class="section-heading mb-4"
+                            style="font-size: 25px;">
+                            Contact Information
+                        </h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Our Location</h5>
+                                <p>Maharashtra, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Phone Number</h5>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email Address</h5>
+                                <p>info@brightfuture.edu</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Office Hours</h5>
+                                <p>
+                                    Monday to Saturday<br>
+                                    9:00 AM – 5:00 PM
+                                </p>
+                            </div>
+                        </div>
+
+                        <img src="students.jpg"
+                             alt="College students"
+                             class="contact-photo">
+
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7 mb-4">
+                    <div class="contact-card">
+
+                        <h3 class="section-heading mb-2"
+                            style="font-size: 25px;">
+                            Send Us a Message
+                        </h3>
+
+                        <p class="section-description mb-4">
+                            Please complete the form with your details.
+                        </p>
+
+                        <form action="#" method="post">
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Full Name</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           id="name"
+                                           name="name"
+                                           placeholder="Enter your name"
+                                           required>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email Address</label>
+                                    <input type="email"
+                                           class="form-control"
+                                           id="email"
+                                           name="email"
+                                           placeholder="Enter your email"
+                                           required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel"
+                                           class="form-control"
+                                           id="phone"
+                                           name="phone"
+                                           placeholder="Enter phone number">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="subject">Subject</label>
+                                    <select class="form-control"
+                                            id="subject"
+                                            name="subject"
+                                            required>
+                                        <option value="">Select subject</option>
+                                        <option value="Admissions">Admissions</option>
+                                        <option value="Courses">Courses</option>
+                                        <option value="Facilities">Facilities</option>
+                                        <option value="General Enquiry">
+                                            General Enquiry
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea class="form-control"
+                                          id="message"
+                                          name="message"
+                                          placeholder="Write your message here..."
+                                          required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Submit Enquiry
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-5 mb-4">
+                    <h5>
+                        <i class="fas fa-graduation-cap"></i>
+                        Bright Future College
+                    </h5>
+                    <p>
+                        Empowering students through education,
+                        innovation and practical learning.
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+
+                <div class="col-md-4 col-6 mb-4">
+                    <h5>Contact Details</h5>
+                    <p><i class="fas fa-envelope"></i>
+                        info@brightfuture.edu</p>
+                    <p><i class="fas fa-phone"></i>
+                        +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i>
+                        Maharashtra, India</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Bright Future College. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
